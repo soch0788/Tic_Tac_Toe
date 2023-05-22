@@ -46,7 +46,7 @@ function endGame(player) {
         for(let j=0;j<3;j++){
             if (gridtrack[i][j] == ""){
                 gridtrack[i][j] = "A"
-                gridtrack[i][j].textContent = " A"
+             
             }
         }
     }
@@ -70,12 +70,9 @@ function playGame() {
 function newGame() {
     turn = "x"
     turncount = 0
-    for (let i=0;i<3;i++){
-        for(let j=0;j<3;j++){
-                gridtrack[i][j] = ""
-                gridtrack[i][j].textContent = ""
-            }
-        }
+    gridtrack = [["","",""],["","",""],["","",""]]
+    let gridRes = document.querySelectorAll(".Grid")
+    gridRes.forEach(key=> key.firstChild.textContent="")
     }
 
 
